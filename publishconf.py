@@ -15,14 +15,14 @@ from pelicanconf import *
 DELETE_OUTPUT_DIRECTORY = False
 
 # use the correct abs url
-SITEURL = 'http://username.github.io'
+SITEURL = 'https://alexikey.github.io'
 RELATIVE_URLS = False
 
 
-# FEED_ALL_ATOM = 'feeds/all.atom.xml'
-# CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = 'feeds/all.atom.xml'
+CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
 
 # Following items are often useful when publishing
-
-#DISQUS_SITENAME = ""
+DISQUS_SITENAME = 'alexikey-github-io'
+DISQUS_NO_ID = True
 #GOOGLE_ANALYTICS = ""

@@ -85,16 +85,16 @@ names(loc)
 
 -   timestampMs - дані щодо дати/часу у форматі POSIX, які ми потім конвертуємо у звичний формат;
 
--   latitudeE7,longitudeE7 - координати місцезнаходження у форматі Е7, які ми також зможемо перевести у GPS-координати;
+-   latitudeE7, longitudeE7 - координати місцезнаходження у форматі Е7, які ми також зможемо перевести у GPS-координати;
 
 -   accuracy - точність, містить помилку розташування біля точки у GPS-координатах (вимірюється у метрах);
 
 -   activitys - дані щодо діяльності в вказаний момент часу (детальніше трохи згодом);
 
--   velocity, heading, altitude - швидкість (м/с), напрям, висота (метрів) над рівнем моря
+-   velocity, heading, altitude - швидкість (м/с), напрям, висота (метрів) над рівнем моря.
 
 
-Далі конвертуємо дані часу, координат, додаємо до таблиці дані про точність:
+Далі конвертуємо дані часу, координат та додаємо до таблиці дані про точність:
 
 ``` r
 ldf <- data.frame(t=rep(0,nrow(loc)))
@@ -176,10 +176,10 @@ ldf$altitude <-loc$altitude
 # rm(list=ls())
 ```
 
-##Запитання та відповіді
+##Які таємниці про користувача сховані у Google location history
 ----------------------
 
-Для зручності давайте розіб'ємо дані по роках.
+Для зручності та більш швидкої обробки давайте розіб'ємо дані по роках.
 
 ``` r
 ldf<-readRDS("./loc_data.rds")
@@ -452,10 +452,10 @@ ggplot(df, aes(x = df$activity, group = activity, fill = activtype)) +
 
 ![](/figure/unnamed-chunk-21-1.png) 
 
-**Як видно з діаграми, більшість часу я знаходився у якомусь місці, а коли рухався, то пересувався на авто** 
+**Як видно з діаграми, більшість часу я знаходився у якомусь місці, а коли рухався, то пересувався на авто.** 
 До речі, на велосипеді я не пересувався зовсім, це скорше інформація з транспортних заторів, в які я попадав.
 
-Нижче інформація про сесію R-Studio.
+Наостанку інформація про сесію R-Studio.
 
 ``` r
 sessionInfo()
@@ -532,3 +532,26 @@ sessionInfo()
 2.  [Visualizing My Location History with Python, Shapely, and Basemap](http://beneathdata.com/how-to/visualizing-my-location-history/)
 
 3.  [My Google Location Data](https://rstudio-pubs-static.s3.amazonaws.com/60451_b3ba24cd0e854af491cb7e6816164a69.html)
+
+
+<div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://alexikey-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                

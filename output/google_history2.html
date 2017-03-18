@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Що всередині вашої Google location history? (Частина 2) - DataStories</title>
+    <title>Що всередині вашої Google location history? (Частина 2) - DataStories</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 
+    <link href="https://alexikey.github.io/images/favicon.ico" rel="icon">
 
-<link rel="canonical" href="http://username.github.io/google_history2.html">
+<link rel="canonical" href="https://alexikey.github.io/google_history2.html">
 
         <meta name="author" content="Oleksandr Kursik" />
         <meta name="keywords" content="google location,google history,vizualization,R" />
@@ -17,8 +18,8 @@
 
         <meta property="og:site_name" content="DataStories" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="Що всередині вашої Google location history? (Частина 2)"/>
-        <meta property="og:url" content="http://username.github.io/google_history2.html"/>
+        <meta property="og:title" content="Що всередині вашої Google location history? (Частина 2)"/>
+        <meta property="og:url" content="https://alexikey.github.io/google_history2.html"/>
         <meta property="og:description" content="У попередній частині ми подивилися на свою збережену хронологію місцезнаходжень, яку зберігає Google. Сьогодні подивитимся на те, які ж дані і в якому форматі там зберігаються, а також як їх можливо використати. Для цього ми отримаємо історію своїх переміщень у вигляді окремого файла. Давайте зайдемо в свій Google-account за посиланням …"/>
         <meta property="article:published_time" content="2017-02-10" />
             <meta property="article:section" content="R" />
@@ -30,16 +31,21 @@
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://username.github.io/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
-    <link href="http://username.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://alexikey.github.io/theme/css/bootstrap.cerulean.min.css" type="text/css"/>
+    <link href="https://alexikey.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://username.github.io/theme/css/pygments/zenburn.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://username.github.io/theme/css/style.css" type="text/css"/>
-        <link href="http://username.github.io/static/custom.css" rel="stylesheet">
+    <link href="https://alexikey.github.io/theme/css/pygments/zenburn.css" rel="stylesheet">
+        <link href="https://alexikey.github.io/theme/css/typogrify.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://alexikey.github.io/theme/css/style.css" type="text/css"/>
+        <link href="https://alexikey.github.io/static/custom.css" rel="stylesheet">
+
+        <link href="https://alexikey.github.io/feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
+              title="DataStories ATOM Feed"/>
 
 
 
-
+        <link href="https://alexikey.github.io/feeds/r.atom.xml" type="application/atom+xml" rel="alternate"
+              title="DataStories R ATOM Feed"/>
 
 </head>
 <body>
@@ -53,14 +59,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://username.github.io/" class="navbar-brand">
-DataStories            </a>
+            <a href="https://alexikey.github.io/" class="navbar-brand">
+            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
+                    <li><a href="/">Блог</a></li>
                     <li><a href="/pages/about.html">Про мене</a></li>
                     <li><a href="/pages/contact.html">Контакти</a></li>
-                    <li><a href="/">Блог</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
             </ul>
@@ -69,18 +75,35 @@ DataStories            </a>
     </div>
 </div> <!-- /.navbar -->
 <!-- Banner -->
-<!-- End Banner -->
+<style>
+	#banner{
+	    background-image:url("https://alexikey.github.io/images/blue-computer-business-background-header.jpg");
+	}
+</style>
+
+<div id="banner">
+	<div class="container">
+		<div class="copy">
+			<h1>DataStories</h1>
+		</div>
+	</div>
+</div><!-- End Banner -->
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
+            <ol class="breadcrumb">
+                <li><a href="https://alexikey.github.io" title="DataStories"><i class="fa fa-home fa-lg"></i></a></li>
+                <li><a href="https://alexikey.github.io/category/r.html" title="R">R</a></li>
+                <li class="active">Що всередині вашої Google location history? (Частина&nbsp;2)</li>
+            </ol>
     <section id="content">
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="http://username.github.io/google_history2.html"
+                    <a href="https://alexikey.github.io/google_history2.html"
                        rel="bookmark"
-                       title="Permalink to Що всередині вашої Google location history? (Частина 2)">
-                        Що всередині вашої Google location history? (Частина 2)
+                       title="Permalink to Що всередині вашої Google location history? (Частина 2)">
+                        Що всередині вашої Google location history? (Частина&nbsp;2)
                     </a>
                 </h1>
             </header>
@@ -98,24 +121,24 @@ DataStories            </a>
 
 
 <span class="label label-default">Tags</span>
-	<a href="http://username.github.io/tag/google-location.html">google location</a>
+	<a href="https://alexikey.github.io/tag/google-location.html">google location</a>
         /
-	<a href="http://username.github.io/tag/google-history.html">google history</a>
+	<a href="https://alexikey.github.io/tag/google-history.html">google history</a>
         /
-	<a href="http://username.github.io/tag/vizualization.html">vizualization</a>
+	<a href="https://alexikey.github.io/tag/vizualization.html">vizualization</a>
         /
-	<a href="http://username.github.io/tag/r.html">R</a>
+	<a href="https://alexikey.github.io/tag/r.html">R</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>У <a href="">попередній частині</a> ми подивилися на свою збережену хронологію місцезнаходжень, яку зберігає Google. Сьогодні подивитимся на те, які ж дані і в якому форматі там зберігаються, а також як їх можливо використати. Для цього ми  отримаємо історію своїх переміщень у вигляді окремого файла. Давайте зайдемо в свій Google-account за посиланням <a href="https://takeout.google.com/settings/takeout">https://takeout.google.com/settings/takeout</a> та оберемо тільки пункт "Карти (ваші місця)":</p>
+                <p>У <a href="">попередній частині</a> ми подивилися на свою збережену хронологію місцезнаходжень, яку зберігає Google. Сьогодні подивитимся на те, які ж дані і в якому форматі там зберігаються, а також як їх можливо використати. Для цього ми  отримаємо історію своїх переміщень у вигляді окремого файла. Давайте зайдемо в свій Google-account за посиланням <a href="https://takeout.google.com/settings/takeout">https://takeout.google.com/settings/takeout</a> та оберемо тільки пункт &#8220;Карти (ваші&nbsp;місця)&#8221;:</p>
 <p><img alt="" src="./images/export1.jpg"></p>
 <p><img alt="Потім шукаємо внизу кнопку &quot;Далі&quot;, натискаємо її" src="./images/export2.png"></p>
 <p><img alt="І наостанку обираємо формат архіву **&quot;zip&quot;**, розміри архіву та спосіб доставки. Потім натискаємо **&quot;Створити архів&quot;**" src="./images/export3.png"></p>
-<p>Google збереже дані у вигляді файла з розширенням <strong>".json"</strong>. Це один із форматів зберігання даних, на кшалт файлів csv чи xls. Його можна також конвертувати <strong>json</strong> в <strong>csv</strong> чи <strong>xls</strong> і далі працювати з даними, наприклад, у програмі Excel.</p>
-<p>Я буду працювати з цими даними за допомогою мови програмування R, яка є чудовим інструментом для аналізу та візуалізації. Ви можете повторити ці розрахунки для себе, використовуючи наведений нижче код.</p>
-<p>Отже почнемо.</p>
-<h2>Загальна статистика</h2>
+<p>Google збереже дані у вигляді файла з розширенням <strong>&#8220;.json&#8221;</strong>. Це один із форматів зберігання даних, на кшалт файлів csv чи xls. Його можна також конвертувати <strong>json</strong> в <strong>csv</strong> чи <strong>xls</strong> і далі працювати з даними, наприклад, у програмі&nbsp;Excel.</p>
+<p>Я буду працювати з цими даними за допомогою мови програмування R, яка є чудовим інструментом для аналізу та візуалізації. Ви можете повторити ці розрахунки для себе, використовуючи наведений нижче&nbsp;код.</p>
+<p>Отже&nbsp;почнемо.</p>
+<h2>Загальна&nbsp;статистика</h2>
 <p>Спочатку прочитаємо дані. Це можна зробити за допомогою бібліотеки <strong>jsonlite</strong></p>
 <div class="highlight"><pre><span></span><span class="kn">library</span><span class="p">(</span>jsonlite<span class="p">)</span>
 <span class="kn">require</span><span class="p">(</span>plyr<span class="p">)</span>
@@ -135,7 +158,7 @@ DataStories            </a>
 </pre></div>
 
 
-<p>Файл зчитано, це зайняло майже 5 хвилин у мене. Давайте подивимось, які дані ми маємо в архіві:</p>
+<p>Файл зчитано, це зайняло майже 5 хвилин у мене. Давайте подивимось, які дані ми маємо в&nbsp;архіві:</p>
 <div class="highlight"><pre><span></span><span class="c1"># extracting the locations dataframe</span>
 loc <span class="o">&lt;-</span> x<span class="o">$</span>locations
 <span class="kp">head</span><span class="p">(</span>loc<span class="p">)</span>
@@ -176,25 +199,25 @@ loc <span class="o">&lt;-</span> x<span class="o">$</span>locations
 </pre></div>
 
 
-<p>Це таблиця з 8 колонок:</p>
+<p>Це таблиця з 8&nbsp;колонок:</p>
 <ul>
 <li>
-<p>timestampMs - дані щодо дати/часу у форматі POSIX, які ми потім конвертуємо у звичний формат;</p>
+<p>timestampMs - дані щодо дати/часу у форматі <span class="caps">POSIX</span>, які ми потім конвертуємо у звичний&nbsp;формат;</p>
 </li>
 <li>
-<p>latitudeE7,longitudeE7 - координати місцезнаходження у форматі Е7, які ми також зможемо перевести у GPS-координати;</p>
+<p>latitudeE7, longitudeE7 - координати місцезнаходження у форматі Е7, які ми також зможемо перевести у <span class="caps">GPS</span>-координати;</p>
 </li>
 <li>
-<p>accuracy - точність, містить помилку розташування біля точки у GPS-координатах (вимірюється у метрах);</p>
+<p>accuracy - точність, містить помилку розташування біля точки у <span class="caps">GPS</span>-координатах (вимірюється у&nbsp;метрах);</p>
 </li>
 <li>
-<p>activitys - дані щодо діяльності в вказаний момент часу (детальніше трохи згодом);</p>
+<p>activitys - дані щодо діяльності в вказаний момент часу (детальніше трохи&nbsp;згодом);</p>
 </li>
 <li>
-<p>velocity, heading, altitude - швидкість (м/с), напрям, висота (метрів) над рівнем моря</p>
+<p>velocity, heading, altitude - швидкість (м/с), напрям, висота (метрів) над рівнем&nbsp;моря.</p>
 </li>
 </ul>
-<p>Далі конвертуємо дані часу, координат, додаємо до таблиці дані про точність:</p>
+<p>Далі конвертуємо дані часу, координат та додаємо до таблиці дані про&nbsp;точність:</p>
 <div class="highlight"><pre><span></span>ldf <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span>t<span class="o">=</span><span class="kp">rep</span><span class="p">(</span><span class="m">0</span><span class="p">,</span><span class="kp">nrow</span><span class="p">(</span>loc<span class="p">)))</span>
 
 <span class="c1"># converting time column from posix milliseconds into a readable time scale</span>
@@ -209,7 +232,7 @@ ldf<span class="o">$</span><span class="kp">t</span><span class="o">&lt;-</span>
 </pre></div>
 
 
-<p>Ось так виглядають наші дані тепер:</p>
+<p>Ось так виглядають наші дані&nbsp;тепер:</p>
 <div class="highlight"><pre><span></span><span class="kp">head</span><span class="p">(</span>ldf<span class="p">)</span>
 </pre></div>
 
@@ -224,7 +247,7 @@ ldf<span class="o">$</span><span class="kp">t</span><span class="o">&lt;-</span>
 </pre></div>
 
 
-<p>Тепер колонки часу та координат набули звичного для нас вигляду. Саме час розібратися із змістом самої таблиці.</p>
+<p>Тепер колонки часу та координат набули звичного для нас вигляду. Саме час розібратися із змістом самої&nbsp;таблиці.</p>
 <p>Переформуємо дані щодо переміщень (<strong>activitys</strong>)</p>
 <div class="highlight"><pre><span></span><span class="c1"># get the most likely activity type and confidence for each time point.</span>
 act <span class="o">&lt;-</span> laply<span class="p">(</span>loc<span class="o">$</span>activitys<span class="p">,</span> <span class="kr">function</span><span class="p">(</span>f<span class="p">)</span> <span class="p">{</span>
@@ -237,7 +260,7 @@ ldf<span class="o">$</span>confidence <span class="o">&lt;-</span> <span class="
 </pre></div>
 
 
-<p><strong>activitys</strong> може бути наступних видів:</p>
+<p><strong>activitys</strong> може бути наступних&nbsp;видів:</p>
 <div class="highlight"><pre><span></span>a<span class="o">&lt;-</span>count<span class="p">(</span>ldf<span class="o">$</span>activity<span class="p">)</span>
 a<span class="o">&lt;-</span>a<span class="p">[</span><span class="kp">order</span><span class="p">(</span><span class="o">-</span>a<span class="o">$</span>freq<span class="p">),]</span>
 a
@@ -256,24 +279,24 @@ a
 </pre></div>
 
 
-<p>Надалі спробуємо отримати з цих ознак щось путнє.</p>
-<p>Додаємо дані про швидкість, висоту та напрям руху</p>
+<p>Надалі спробуємо отримати з цих ознак щось&nbsp;путнє.</p>
+<p>Додаємо дані про швидкість, висоту та напрям&nbsp;руху</p>
 <div class="highlight"><pre><span></span>ldf<span class="o">$</span>velocity <span class="o">&lt;-</span> loc<span class="o">$</span>velocity<span class="o">*</span><span class="m">3.6</span>  <span class="c1"># m/s -&gt; km/h</span>
 ldf<span class="o">$</span>heading <span class="o">&lt;-</span> loc<span class="o">$</span>heading
 ldf<span class="o">$</span>altitude <span class="o">&lt;-</span>loc<span class="o">$</span>altitude
 </pre></div>
 
 
-<p>Все, більше інофрмації в Google location history немає, тому збережемо отриманий результат на диск та звільнимо оперативну память</p>
+<p>Все, більше інофрмації в Google location history немає, тому збережемо отриманий результат на диск та звільнимо оперативну&nbsp;память</p>
 <div class="highlight"><pre><span></span><span class="c1">#save ready data</span>
 <span class="c1"># saveRDS(ldf, &quot;./loc_data.rds&quot;)</span>
 <span class="c1"># rm(list=ls())</span>
 </pre></div>
 
 
-<h2>Запитання та відповіді</h2>
+<h2>Які таємниці про користувача сховані у Google location&nbsp;history</h2>
 <hr>
-<p>Для зручності давайте розіб'ємо дані по роках.</p>
+<p>Для зручності та більш швидкої обробки давайте розіб&#8217;ємо дані по&nbsp;роках.</p>
 <div class="highlight"><pre><span></span>ldf<span class="o">&lt;-</span><span class="kp">readRDS</span><span class="p">(</span><span class="s">&quot;./loc_data.rds&quot;</span><span class="p">)</span>
 df2013<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">(</span>ldf<span class="p">,</span>date <span class="o">&gt;=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&quot;2013-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> date <span class="o">&lt;=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&quot;2013-12-31&quot;</span><span class="p">))</span>
 df2014<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">(</span>ldf<span class="p">,</span>date <span class="o">&gt;=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&quot;2014-01-01&quot;</span><span class="p">)</span> <span class="o">&amp;</span> date <span class="o">&lt;=</span> <span class="kp">as.Date</span><span class="p">(</span><span class="s">&quot;2014-12-31&quot;</span><span class="p">))</span>
@@ -282,7 +305,7 @@ df2016<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">
 </pre></div>
 
 
-<h3>З якого моменту Google слідкував за мною?</h3>
+<h3>З якого моменту Google слідкував за&nbsp;мною?</h3>
 <div class="highlight"><pre><span></span><span class="kp">min</span><span class="p">(</span>ldf<span class="o">$</span>time<span class="p">)</span>
 </pre></div>
 
@@ -291,11 +314,11 @@ df2016<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">
 </pre></div>
 
 
-<p><strong>Отже з 22 грудня 2012 року :)</strong></p>
-<h3>З якою частотою це відбувалось?</h3>
-<p>Подивимось загальну статистику даних:</p>
+<p><strong>Отже з 22 грудня 2012 року&nbsp;:)</strong></p>
+<h3>З якою частотою це&nbsp;відбувалось?</h3>
+<p>Подивимось загальну статистику&nbsp;даних:</p>
 <ul>
-<li>кількість записів</li>
+<li>кількість&nbsp;записів</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kp">nrow</span><span class="p">(</span>ldf<span class="p">)</span>
 </pre></div>
@@ -306,7 +329,7 @@ df2016<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">
 
 
 <ul>
-<li>час початку та кінцевий відслідковування (слід зауважити, що архів я отримав станом на вечір 31 грудня 2016 року, щоб мати повну статистику ще й за 2016 рік)</li>
+<li>час початку та кінцевий відслідковування (слід зауважити, що архів я отримав станом на вечір 31 грудня 2016 року, щоб мати повну статистику ще й за 2016&nbsp;рік)</li>
 </ul>
 <div class="highlight"><pre><span></span><span class="kp">min</span><span class="p">(</span>ldf<span class="o">$</span>time<span class="p">)</span>
 </pre></div>
@@ -324,7 +347,7 @@ df2016<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">
 </pre></div>
 
 
-<p>Всього архів містить 1 527 827 зафіксованих місцезнаходжень з 22-12-2012 до 31-12-2016.</p>
+<p>Всього архів містить 1 527 827 зафіксованих місцезнаходжень з 22-12-2012 до&nbsp;31-12-2016.</p>
 <div class="highlight"><pre><span></span>points_p_day <span class="o">&lt;-</span> <span class="kt">data.frame</span><span class="p">(</span><span class="kp">table</span><span class="p">(</span>ldf<span class="o">$</span><span class="kp">date</span><span class="p">),</span> group <span class="o">=</span> <span class="s">&quot;day&quot;</span><span class="p">)</span>
 <span class="kp">summary</span><span class="p">(</span>points_p_day<span class="p">)</span>
 </pre></div>
@@ -341,10 +364,10 @@ df2016<span class="o">&lt;-</span><span class="kp">subset</span><span class="p">
 </pre></div>
 
 
-<p><strong>Це 1118 днів, протягом яких частота (Freq) фіксації місцезнаходження коливалась від 1 до 5928 раз на добу. В середньому це склало 1367 раз на добу, 56,91 раз на годину, або майже 1 раз на хвилину.</strong></p>
-<p><em>* Оскільки між цими двома датами мало би бути 1470 днів, то відповідно інформація про 352 днів була видалена або я забороняв збір даних щодо місцезнаходження. Нічого дивного, бо на той час я ще не сподівався, що буду вивчати своє місцезнаходження за декілька років.</em></p>
-<p>Насправді, інтервал оновлення визначається рівнем заряду батареї, від того рухаєтесь Ви чи ні, як швидко рухаєтесь та деяких інших факторів.</p>
-<h3>Де я побував, наприклад, в 2014 році?</h3>
+<p><strong>Це 1118 днів, протягом яких частота (Freq) фіксації місцезнаходження коливалась від 1 до 5928 раз на добу. В середньому це склало 1367 раз на добу, 56,91 раз на годину, або майже 1 раз на&nbsp;хвилину.</strong></p>
+<p><em>* Оскільки між цими двома датами мало би бути 1470 днів, то відповідно інформація про 352 днів була видалена або я забороняв збір даних щодо місцезнаходження. Нічого дивного, бо на той час я ще не сподівався, що буду вивчати своє місцезнаходження за декілька&nbsp;років.</em></p>
+<p>Насправді, інтервал оновлення визначається рівнем заряду батареї, від того рухаєтесь Ви чи ні, як швидко рухаєтесь та деяких інших&nbsp;факторів.</p>
+<h3>Де я побував, наприклад, в 2014&nbsp;році?</h3>
 <div class="highlight"><pre><span></span><span class="kn">require</span><span class="p">(</span><span class="s">&#39;ggplot2&#39;</span><span class="p">)</span>
 <span class="kn">require</span><span class="p">(</span><span class="s">&#39;ggmap&#39;</span><span class="p">)</span>
 </pre></div>
@@ -374,9 +397,9 @@ ggmap<span class="p">(</span>ldf_big <span class="p">)</span> <span class="o">+<
 
 
 <p><img alt="" src="./figure/unnamed-chunk-14-1.png"> </p>
-<p><strong>Червоні позначки на карті показують всі мої координати протягом року. Як видно, в 2014 році я подорожував по Україні та був на острові Крит у Греції.</strong></p>
-<h3>Де я бував у Києві?</h3>
-<p>Давайте глянемо на мої місцезнаходження у більшому масштабі. Спершу Київ.</p>
+<p><strong>Червоні позначки на карті показують всі мої координати протягом року. Як видно, в 2014 році я подорожував по Україні та був на острові Крит у&nbsp;Греції.</strong></p>
+<h3>Де я бував у&nbsp;Києві?</h3>
+<p>Давайте глянемо на мої місцезнаходження у більшому масштабі. Спершу&nbsp;Київ.</p>
 <div class="highlight"><pre><span></span>l<span class="o">&lt;-</span>geocode<span class="p">(</span><span class="s">&#39;Ukraine, Kyiv&#39;</span><span class="p">)</span>
 
 region<span class="o">&lt;-</span>get_googlemap<span class="p">(</span>center <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>l<span class="o">$</span>lon<span class="p">,</span>l<span class="o">$</span>lat<span class="p">),</span> color <span class="o">=</span> <span class="s">&quot;color&quot;</span><span class="p">,</span>size <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">640</span><span class="p">,</span><span class="m">640</span><span class="p">),</span>scale <span class="o">=</span> <span class="m">2</span><span class="p">,</span>zoom <span class="o">=</span> <span class="m">11</span><span class="p">)</span>
@@ -395,7 +418,7 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 
 
 <p><img alt="" src="./figure/unnamed-chunk-15-1.png"> </p>
-<p>Добре видно, що більшість моїх місцеперебувань знаходилися на правому березі Дніпра, на лівому фактично лише окремі точки. Щоб отримати більш виразну картину, давайте змінимо колір точки перебування в залежності від швидкості, таким чином буде видно чи я просто проїзджав місцевість чи, можливо, знаходився там більш довгий час.</p>
+<p>Добре видно, що більшість моїх місцеперебувань знаходилися на правому березі Дніпра, на лівому фактично лише окремі точки. Щоб отримати більш виразну картину, давайте змінимо колір точки перебування в залежності від швидкості, таким чином буде видно чи я просто проїзджав місцевість чи, можливо, знаходився там більш довгий&nbsp;час.</p>
 <div class="highlight"><pre><span></span>df<span class="o">&lt;-</span>df<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>df<span class="o">$</span>velocity<span class="p">)),</span> <span class="p">]</span>
 
 ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o">=</span><span class="s">&quot;device&quot;</span><span class="p">)</span> <span class="o">+</span> 
@@ -415,8 +438,8 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 
 
 <p><img alt="" src="./figure/unnamed-chunk-16-1.png">        </p>
-<p><strong>Точки з синім кольором показують місця, де я на протязі року знаходився найдовше. Це дім, робота etc.</strong></p>
-<h3>Де я бував у Львові?</h3>
+<p><strong>Точки з синім кольором показують місця, де я на протязі року знаходився найдовше. Це дім, робота&nbsp;etc.</strong></p>
+<h3>Де я бував у&nbsp;Львові?</h3>
 <div class="highlight"><pre><span></span>df<span class="o">&lt;-</span>df2014
 l<span class="o">&lt;-</span>geocode<span class="p">(</span><span class="s">&#39;Ukraine, Lviv&#39;</span><span class="p">)</span>
 
@@ -435,7 +458,7 @@ ggmap<span class="p">(</span>region<span class="p">,</span>extent<span class="o"
 
 
 <p><img alt="" src="./figure/unnamed-chunk-17-1.png"></p>
-<h3>Де я бував у Греції?</h3>
+<h3>Де я бував у&nbsp;Греції?</h3>
 <div class="highlight"><pre><span></span>l<span class="o">&lt;-</span>geocode<span class="p">(</span><span class="s">&#39;Greece, Crete&#39;</span><span class="p">)</span>
 
 region<span class="o">&lt;-</span>get_googlemap<span class="p">(</span>center <span class="o">=</span> <span class="kt">c</span><span class="p">(</span>l<span class="o">$</span>lon<span class="p">,</span>l<span class="o">$</span>lat<span class="p">),</span> color <span class="o">=</span> <span class="s">&quot;color&quot;</span><span class="p">,</span>size <span class="o">=</span> <span class="kt">c</span><span class="p">(</span><span class="m">640</span><span class="p">,</span><span class="m">640</span><span class="p">),</span>scale <span class="o">=</span> <span class="m">2</span><span class="p">,</span>zoom <span class="o">=</span> <span class="m">8</span><span class="p">)</span>
@@ -458,8 +481,8 @@ ggmap<span class="p">(</span>region<span class="p">,</span>extent<span class="o"
 
 
 <p><img alt="" src="./figure/unnamed-chunk-18-1.png"></p>
-<h3>Що показує параметр "activity" ?</h3>
-<p>Google визначає для кожної пари координат яким чином пересувався об'єкт і якщо активність позначити кольором (так само як я зробив для швидкості), то можливо побачити на карті найбільш частий для конкретної точки тип активністі.</p>
+<h3>Що показує параметр &#8220;activity&#8221;&nbsp;?</h3>
+<p>Google визначає для кожної пари координат яким чином пересувався об&#8217;єкт і якщо активність позначити кольором (так само як я зробив для швидкості), то можливо побачити на карті найбільш частий для конкретної точки тип&nbsp;активністі.</p>
 <div class="highlight"><pre><span></span>df<span class="o">&lt;-</span>df2014
 df<span class="o">$</span>activity<span class="p">[</span>df<span class="o">$</span>activity<span class="o">==</span><span class="s">&quot;NA&quot;</span><span class="p">]</span><span class="o">=</span> <span class="kc">NA</span>
 df<span class="o">&lt;-</span>df<span class="p">[</span><span class="kp">which</span><span class="p">(</span><span class="o">!</span><span class="kp">is.na</span><span class="p">(</span>df<span class="o">$</span>activity<span class="p">)),</span> <span class="p">]</span>
@@ -484,25 +507,25 @@ a
 
 <ul>
 <li>
-<p>still - об'єкт знаходився на місці</p>
+<p>still - об&#8217;єкт знаходився на&nbsp;місці</p>
 </li>
 <li>
-<p>tilting - об'єкт повертає</p>
+<p>tilting - об&#8217;єкт&nbsp;повертає</p>
 </li>
 <li>
-<p>inVehicle - об'єкт рухається в транспорті</p>
+<p>inVehicle - об&#8217;єкт рухається в&nbsp;транспорті</p>
 </li>
 <li>
-<p>unknown - невідомий вид активності</p>
+<p>unknown - невідомий вид&nbsp;активності</p>
 </li>
 <li>
-<p>onFoot - об'єкт йде пішки</p>
+<p>onFoot - об&#8217;єкт йде&nbsp;пішки</p>
 </li>
 <li>
-<p>onBicycle - об'єкт рухається на велосипеді</p>
+<p>onBicycle - об&#8217;єкт рухається на&nbsp;велосипеді</p>
 </li>
 <li>
-<p>exitingVehicle - об'єкт залишає траспортний засіб</p>
+<p>exitingVehicle - об&#8217;єкт залишає траспортний&nbsp;засіб</p>
 </li>
 </ul>
 <div class="highlight"><pre><span></span>l<span class="o">&lt;-</span>geocode<span class="p">(</span><span class="s">&#39;Ukraine, Kyiv&#39;</span><span class="p">)</span>
@@ -534,7 +557,7 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 
 
 <p><img alt="" src="./figure/unnamed-chunk-20-1.png"></p>
-<p>Наостанку зробимо частотний розподіл активності за 2014 рік.</p>
+<p>Наостанку зробимо частотний розподіл активності за 2014&nbsp;рік.</p>
 <div class="highlight"><pre><span></span>ggplot<span class="p">(</span>df<span class="p">,</span> aes<span class="p">(</span>x <span class="o">=</span> df<span class="o">$</span>activity<span class="p">,</span> group <span class="o">=</span> activity<span class="p">,</span> fill <span class="o">=</span> activtype<span class="p">))</span> <span class="o">+</span> 
   geom_bar<span class="p">()</span>  <span class="o">+</span> 
   guides<span class="p">(</span>fill <span class="o">=</span> <span class="kc">FALSE</span><span class="p">)</span> <span class="o">+</span>
@@ -550,9 +573,9 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 
 
 <p><img alt="" src="/figure/unnamed-chunk-21-1.png"> </p>
-<p><strong>Як видно з діаграми, більшість часу я знаходився у якомусь місці, а коли рухався, то пересувався на авто</strong> 
-До речі, на велосипеді я не пересувався зовсім, це скорше інформація з транспортних заторів, в які я попадав.</p>
-<p>Нижче інформація про сесію R-Studio.</p>
+<p><strong>Як видно з діаграми, більшість часу я знаходився у якомусь місці, а коли рухався, то пересувався на авто.</strong> 
+До речі, на велосипеді я не пересувався зовсім, це скорше інформація з транспортних заторів, в які я&nbsp;попадав.</p>
+<p>Наостанку інформація про сесію&nbsp;R-Studio.</p>
 <div class="highlight"><pre><span></span>sessionInfo<span class="p">()</span>
 </pre></div>
 
@@ -591,41 +614,92 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 </pre></div>
 
 
-<h2>Коротко: що знає про наше місцерозташування Google, якщо ми користуємся смартфоном з обліковим записом Google та дозволили збирати інформацію про місцезнаходження?</h2>
+<h2>Коротко: що знає про наше місцерозташування Google, якщо ми користуємся смартфоном з обліковим записом Google та дозволили збирати інформацію про&nbsp;місцезнаходження?</h2>
 <hr>
-<p><strong>- Координати у часі та просторі з періодом в середньому один раз на хвилину, а також тип переміщення (активності) для конкретної точки.</strong></p>
-<p><sub>* - що стосується точності для координат - вона залежить від того, у який спосіб визначалось місцерозташування. Існує два провайдера координат для мобіьного телефону: GPS и Network. GPS – це дані із GPS-супутників.Network – це координати, які можна отримати через мобільну мережу чи WiFi.
+<p><strong>- Координати у часі та просторі з періодом в середньому один раз на хвилину, а також тип переміщення (активності) для конкретної&nbsp;точки.</strong></p>
+<p><sub>* - що стосується точності для координат - вона залежить від того, у який спосіб визначалось місцерозташування. Існує два провайдера координат для мобіьного телефону: <span class="caps">GPS</span> и Network. <span class="caps">GPS</span> – це дані із <span class="caps">GPS</span>-супутників.Network – це координати, які можна отримати через мобільну мережу чи WiFi.
 Орієнтовно, цифри похибки приблизно такі:
 -   gps ~ 15 м
 -   WiFi - залежить від розташування точок WiFi, за умови їх наявності ~ 20-30 м.
--   Координати, отримані від мобільної мережі, залежать від розташування GSM-станцій, орієнтовна цифра похибки ~1500 м </sub></p>
-<p><strong>- Швидкість переміщення, висоту над рівнем моря та напрямок руху.</strong></p>
+-   Координати, отримані від мобільної мережі, залежать від розташування <span class="caps">GSM</span>-станцій, орієнтовна цифра похибки ~1500 м </sub></p>
+<p><strong>- Швидкість переміщення, висоту над рівнем моря та напрямок&nbsp;руху.</strong></p>
 <h2>Висновки</h2>
-<p>Стосовно себе, я вважаю, що функція Google location history скоріш корисна, аніж шкідлива. Я із задоволенням пригадав, де мені прийшлось побувати за останні кілька років. Також хочу сказати, що пошкодував, що в мене немає частини моєї історії місцезнаходження і в майбутньому не планую виключати цю опцію в телефоні.</p>
-<p>Проте, якщо подібна інформація попаде до сторонніх осіб, вони можуть взнати:</p>
+<p>Стосовно себе, я вважаю, що функція Google location history скоріш корисна, аніж шкідлива. Я із задоволенням пригадав, де мені прийшлось побувати за останні кілька років. Також хочу сказати, що пошкодував, що в мене немає частини моєї історії місцезнаходження і в майбутньому не планую виключати цю опцію в&nbsp;телефоні.</p>
+<p>Проте, якщо подібна інформація попаде до сторонніх осіб, вони можуть&nbsp;взнати:</p>
 <ul>
-<li>місце проживання, тобто де Ви у більшості часу знаходились вночі,</li>
-<li>місце роботи чи перебуванння вдень, </li>
-<li>інші популярні місця, наприклад де Ви буваєте по вихідним,</li>
-<li>швидкість пересування ( відповідно, вид транспорту),</li>
-<li>відділення банків, магазинів і т.п., в яких Ви зазвичай буваєте.</li>
+<li>місце проживання, тобто де Ви у більшості часу знаходились&nbsp;вночі,</li>
+<li>місце роботи чи перебуванння&nbsp;вдень, </li>
+<li>інші популярні місця, наприклад де Ви буваєте по&nbsp;вихідним,</li>
+<li>швидкість пересування ( відповідно, вид&nbsp;транспорту),</li>
+<li>відділення банків, магазинів і т.п., в яких Ви зазвичай&nbsp;буваєте.</li>
 </ul>
-<p>Доповнивши дані інформацією з інших джерел по людині можливо взнати практично все. Але це вже зовсім інша історія про дані. Залишається сподіватися, що Google location history може попасти до чужих рук тільки якщо Ваш акаунт зламають. А щоб цього не відбулось - регулярно міняйте паролі та увімкніть двохфакторну аутентифікацію.</p>
+<p>Доповнивши дані інформацією з інших джерел по людині можливо взнати практично все. Але це вже зовсім інша історія про дані. Залишається сподіватися, що Google location history може попасти до чужих рук тільки якщо Ваш акаунт зламають. А щоб цього не відбулось - регулярно міняйте паролі та увімкніть двохфакторну&nbsp;аутентифікацію.</p>
 <hr>
-<h3>При написанні було використано наступні матеріали:</h3>
+<h3>При написанні було використано наступні&nbsp;матеріали:</h3>
 <ol>
 <li>
 <p><a href="https://www.r-bloggers.com/how-to-map-your-google-location-history-with-r/">How to map your Google location history with R</a>.</p>
 </li>
 <li>
-<p><a href="http://beneathdata.com/how-to/visualizing-my-location-history/">Visualizing My Location History with Python, Shapely, and Basemap</a></p>
+<p><a href="http://beneathdata.com/how-to/visualizing-my-location-history/">Visualizing My Location History with Python, Shapely, and&nbsp;Basemap</a></p>
 </li>
 <li>
-<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/60451_b3ba24cd0e854af491cb7e6816164a69.html">My Google Location Data</a></p>
+<p><a href="https://rstudio-pubs-static.s3.amazonaws.com/60451_b3ba24cd0e854af491cb7e6816164a69.html">My Google Location&nbsp;Data</a></p>
 </li>
 </ol>
+<div id="disqus_thread"></div>
+
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+/*
+var disqus_config = function () {
+this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://alexikey-github-io.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </div>
             <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'alexikey-github-io'; // required: replace example with your forum shortname
+
+                var disqus_url = 'https://alexikey.github.io/google_history2.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
         </article>
     </section>
 
@@ -645,26 +719,26 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
 
 
 
-            <li class="list-group-item"><a href="http://username.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="https://alexikey.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://username.github.io/tag/vizualization.html">
-                            vizualization
+                        <a href="https://alexikey.github.io/tag/google-history.html">
+                            google history
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://username.github.io/tag/google-location.html">
-                            google location
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
-                        <a href="http://username.github.io/tag/r.html">
+                        <a href="https://alexikey.github.io/tag/r.html">
                             R
                         </a>
                     </li>
                     <li class="list-group-item tag-1">
-                        <a href="http://username.github.io/tag/google-history.html">
-                            google history
+                        <a href="https://alexikey.github.io/tag/vizualization.html">
+                            vizualization
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-1">
+                        <a href="https://alexikey.github.io/tag/google-location.html">
+                            google location
                         </a>
                     </li>
                 </ul>
@@ -688,14 +762,30 @@ ggmap<span class="p">(</span>region<span class="p">,</span> extent<span class="o
       </div>
    </div>
 </footer>
-<script src="http://username.github.io/theme/js/jquery.min.js"></script>
+<script src="https://alexikey.github.io/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://username.github.io/theme/js/bootstrap.min.js"></script>
+<script src="https://alexikey.github.io/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://username.github.io/theme/js/respond.min.js"></script>
+<script src="https://alexikey.github.io/theme/js/respond.min.js"></script>
 
+    <script src="https://alexikey.github.io/theme/js/bodypadding.js"></script>
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'alexikey-github-io'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
 
 </body>
 </html>

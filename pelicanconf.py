@@ -4,9 +4,10 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Oleksandr Kursik'
 SITENAME = u'DataStories'  
+#SITENAME = ''  
 SITEURL =''
-#SITELOGO = 'images/my_site_logo.png'
 
+FAVICON = 'images/favicon.ico'
 PATH = 'content'
 
 TIMEZONE = 'Europe/Kiev'
@@ -44,23 +45,28 @@ DISPLAY_PAGES_ON_MENU = False
 #DISPLAY_TAGS_INLINE = True
 
 MENUITEMS = (
+     (u'Блог', '/'),
      (u'Про мене', '/pages/about.html'),
-     (u'Контакти', '/pages/contact.html'),
-     (u'Блог', '/')
+     (u'Контакти', '/pages/contact.html')
+     
 #     ('Email', 'http://www.google.com/recaptcha/mailhide/d?...'),
 #     ('Vita', '/pdfs/HouserCV.pdf')
      )
 
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = False
 
 # THEME
 THEME = u"pelican-bootstrap3"
 #BOOTSTRAP_THEME = 'simplex'
 #BOOTSTRAP_THEME = 'spacelab'
+#BOOTSTRAP_THEME = 'readable'
 BOOTSTRAP_THEME = 'cerulean'
 CUSTOM_CSS = 'static/custom.css'
+BOOTSTRAP_FLUID = False
+
+
 # To tell Pelican to copy the relevant file to the desired destination, 
 # add the path to STATIC_PATHS and the destination to EXTRA_PATH_METADATA
 STATIC_PATHS = ['figure', 'images','extra/custom.css']
@@ -107,5 +113,27 @@ LOAD_CONTENT_CACHE = False
 # }
 
 PYGMENTS_STYLE = 'zenburn'  
-#TYPOGRIFY = True
-IGNORE_FILES = ['	notes.md']
+TYPOGRIFY = True
+#IGNORE_FILES = ['	notes.md']
+
+DISQUS_SITENAME = ''
+DISQUS_NO_ID = True
+# DISQUS_SECRET_KEY = u'YOUR_SECRET_KEY'
+# DISQUS_PUBLIC_KEY = u'YOUR_PUBLIC_KEY'
+
+#CEO
+DISPLAY_BREADCRUMBS = True
+DISPLAY_CATEGORY_IN_BREADCRUMBS = True
+
+
+#Banner
+BANNER = 'images/blue-computer-business-background-header.jpg'
+#BANNER = 'f8386357ec7ebd1ffb50626a71ed1ed0-1  .png'
+#BANNER_SUBTITLE = 'This is my subtitle'
+BANNER_ALL_PAGES = True
+
+
+#HEADER_IMAGE = "images/profile.jpg"
+HIDE_SITENAME = True
+#HIDE_SIDEBAR  = True
+#SITELOGO = 'images/profile.jpg'
